@@ -18,8 +18,8 @@ import {
   SmartphoneNfc
 } from 'lucide-react';
 
-const WHATSAPP_LINK = "https://wa.me/+201019418796";
-const CONTACT_EMAIL = "omar@ctdigital.ae";
+const WHATSAPP_LINK = "https://wa.me/971509174676";
+const CONTACT_EMAIL = "info@ctdigital.ae";
 
 const HorseIcon = ({ className }: { className?: string }) => (
   <svg 
