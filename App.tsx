@@ -269,7 +269,7 @@ const Footer = () => (
           <ul className="space-y-4">
             <li className="flex items-center gap-3">
               <Smartphone className="w-5 h-5 text-amber-500" />
-              <a href={WHATSAPP_LINK} className="text-slate-400 hover:text-white transition-colors">+20 101 941 8796</a>
+              <a href={WHATSAPP_LINK} className="text-slate-400 hover:text-white transition-colors">+971 50 917 4676⁩</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-amber-500" />
