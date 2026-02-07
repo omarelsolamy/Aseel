@@ -282,7 +282,6 @@ const Footer = () => (
           <ul className="space-y-4">
             <li><a href="#features" className="text-slate-400 hover:text-white transition-colors">المميزات والخصائص</a></li>
             <li><a href={WHATSAPP_LINK} className="text-slate-400 hover:text-white transition-colors">طلب نسخة تجريبية</a></li>
-            <li><a href="https://ctdigital.ae" className="text-slate-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">CT Digital</a></li>
           </ul>
         </div>
       </div>
