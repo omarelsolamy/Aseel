@@ -147,10 +147,11 @@ const FeatureCard = ({ icon: Icon, title, description }: { icon: any, title: str
 );
 
 const Features = () => (
-  <section id="features" className="py-24 bg-slate-950">
+  <section id="features" className="group relative overflow-hidden py-24 bg-slate-950 transition-colors duration-700">
+    <div className="pointer-events-none absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-amber-500/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"></div>
     <div className="container mx-auto px-6">
-      <div className="text-center mb-16">
-        <h2 className="text-amber-500 font-bold text-sm tracking-widest uppercase mb-2">مميزات النظام</h2>
+      <div className="text-center mb-16 transition-transform duration-500 group-hover:-translate-y-1">
+        <h2 className="text-amber-500 font-bold text-sm tracking-widest uppercase mb-2 transition-colors duration-500 group-hover:text-amber-400">مميزات النظام</h2>
         <h3 className="text-3xl md:text-5xl font-black text-white">حلول تقنية لكل تفاصيل الإسطبل</h3>
       </div>
       
@@ -191,7 +192,8 @@ const Features = () => (
 );
 
 const WhyAseel = () => (
-  <section id="preview" className="py-24 bg-slate-900/50">
+  <section id="preview" className="group relative overflow-hidden py-24 bg-slate-900/50 transition-colors duration-700">
+    <div className="pointer-events-none absolute -right-32 top-10 h-80 w-80 rounded-full bg-amber-500/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"></div>
     <div className="container mx-auto px-6">
       <div className="flex flex-col lg:flex-row items-center gap-16">
         <div className="lg:w-1/2">
@@ -207,7 +209,7 @@ const WhyAseel = () => (
           </div>
         </div>
         <div className="lg:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-6">لماذا يختار أصحاب الإسطبلات "أصيل"؟</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transition-transform duration-500 group-hover:-translate-y-1">لماذا يختار أصحاب الإسطبلات "أصيل"؟</h2>
           <div className="space-y-6">
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center">
@@ -250,10 +252,11 @@ const WhyAseel = () => (
 );
 
 const Footer = () => (
-  <footer id="contact" className="bg-slate-950 text-white pt-20 pb-10 border-t border-slate-900">
-    <div className="container mx-auto px-6">
+  <footer id="contact" className="group relative overflow-hidden bg-slate-950 text-white pt-20 pb-10 border-t border-slate-900 transition-colors duration-700">
+    <div className="pointer-events-none absolute -bottom-40 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-amber-500/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"></div>
+    <div className="container mx-auto px-6 relative z-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-        <div>
+        <div className="transition-transform duration-500 group-hover:-translate-y-1">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 gold-gradient rounded-lg flex items-center justify-center">
               <HorseIcon className="text-slate-900 w-6 h-6" />
@@ -264,7 +267,7 @@ const Footer = () => (
             نظام متكامل لإدارة الإسطبلات يجمع بين سهولة الاستخدام وقوة التقارير السحابية لخدمة ملاك الخيل في المنطقة العربية.
           </p>
         </div>
-        <div>
+        <div className="transition-transform duration-500 group-hover:-translate-y-1">
           <h4 className="text-lg font-bold mb-6 text-white/90">تواصل معنا</h4>
           <ul className="space-y-4">
             <li className="flex items-center gap-3">
@@ -277,7 +280,7 @@ const Footer = () => (
             </li>
           </ul>
         </div>
-        <div>
+        <div className="transition-transform duration-500 group-hover:-translate-y-1">
           <h4 className="text-lg font-bold mb-6 text-white/90">روابط سريعة</h4>
           <ul className="space-y-4">
             <li><a href="#features" className="text-slate-400 hover:text-white transition-colors">المميزات والخصائص</a></li>
@@ -301,10 +304,11 @@ const App: React.FC = () => {
         <Hero />
         
         {/* Trusted Partners Section */}
-        <section className="py-12 bg-slate-900/40 border-y border-slate-800">
-          <div className="container mx-auto px-6 text-center">
+        <section className="group relative overflow-hidden py-12 bg-slate-900/40 border-y border-slate-800 transition-colors duration-700">
+          <div className="pointer-events-none absolute -left-20 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full bg-amber-500/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"></div>
+          <div className="container mx-auto px-6 text-center relative z-10">
             <p className="text-slate-500 text-xs font-bold uppercase tracking-[0.2em] mb-4">نفخر بدعم عملائنا في دولة الإمارات العربية المتحدة</p>
-            <div className="flex justify-center items-center opacity-40 grayscale group-hover:grayscale-0 transition-all duration-500">
+            <div className="flex justify-center items-center opacity-40 grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:opacity-70">
                <div className="flex items-center gap-3">
                  <HorseIcon className="w-6 h-6 text-white" />
                  <span className="text-white font-bold text-lg tracking-widest uppercase">United Arab Emirates Stables</span>
@@ -317,11 +321,12 @@ const App: React.FC = () => {
         <WhyAseel />
         
         {/* Simple CTA */}
-        <section className="py-24 bg-amber-500 text-slate-950 relative overflow-hidden">
+        <section className="group py-24 bg-amber-500 text-slate-950 relative overflow-hidden transition-colors duration-700">
           <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-amber-600/20 rounded-full blur-3xl"></div>
+          <div className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-white/30 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-80"></div>
           <div className="container mx-auto px-6 text-center relative z-10">
-            <h2 className="text-3xl md:text-5xl font-black mb-6">جاهز لتنظيم إسطبلك رقمياً؟</h2>
-            <p className="text-lg md:text-xl font-medium mb-10 max-w-2xl mx-auto opacity-90 leading-relaxed">
+            <h2 className="text-3xl md:text-5xl font-black mb-6 transition-transform duration-500 group-hover:-translate-y-1">جاهز لتنظيم إسطبلك رقمياً؟</h2>
+            <p className="text-lg md:text-xl font-medium mb-10 max-w-2xl mx-auto opacity-90 leading-relaxed transition-transform duration-500 group-hover:-translate-y-1">
               انضم إلينا اليوم وابدأ في استخدام نظام "أصيل" لتحسين كفاءة إدارتك وتوفير وقتك وجهدك.
             </p>
             <a 
